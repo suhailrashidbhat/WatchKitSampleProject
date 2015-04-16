@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Gotham-Book_0.otf">
+            <string>Gotham-Book</string>
+            <string>Gotham-Book</string>
+            <string>Gotham-Book</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label width="136" height="35" alignment="center" text="Suhail Bhat" textAlignment="center" id="ZAb-91-iXi">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                        </label>
+                        <imageView width="82" height="0.40000000000000002" alignment="center" image="test_logo.png" id="PmP-bh-Lts"/>
+                        <button width="1" alignment="center" title="View Trips" id="Qov-rW-zRY">
+                            <color key="backgroundColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="t1F-Qc-wgg" kind="push" id="9f4-xr-LDb"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="146" y="119"/>
+        </scene>
+        <!--Watch Connections Interface Controller-->
+        <scene sceneID="AGn-Eu-L8Y">
+            <objects>
+                <controller id="t1F-Qc-wgg" customClass="MKWatchConnectionsInterfaceController">
+                    <items>
+                        <label alignment="center" text="My Trips" textAlignment="center" id="mM5-3M-KdT">
+                            <color key="textColor" red="0.97647058819999999" green="0.46274509800000002" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" name="Gotham-Book" family="Gotham" pointSize="11"/>
+                        </label>
+                        <table alignment="left" id="8xr-62-Pkq">
+                            <items>
+                                <tableRow identifier="connections" id="9pS-91-8DA" customClass="ConnectionRow">
+                                    <group key="rootItem" width="1" height="43" alignment="left" layout="vertical" id="hqp-Rm-yJb">
+                                        <items>
+                                            <label width="129" height="20" alignment="left" verticalAlignment="bottom" text="Paris" textAlignment="left" id="1vn-Vg-0ix">
+                                                <fontDescription key="font" name="Gotham-Book" family="Gotham" pointSize="17"/>
+                                            </label>
+                                            <label width="119" alignment="right" verticalAlignment="bottom" text="22 Jan 2015" textAlignment="right" id="tSn-OM-2IB">
+                                                <color key="textColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" name="Gotham-Book" family="Gotham" pointSize="10"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="1vn-Vg-0ix" id="BfL-gU-n3z"/>
+                                        <outlet property="numberLabel" destination="tSn-OM-2IB" id="BCd-gt-g9R"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="tableView" destination="8xr-62-Pkq" id="jsQ-u3-qMy"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="358" y="119"/>
+        </scene>
+    </scenes>
+</document>
